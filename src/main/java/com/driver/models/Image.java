@@ -2,6 +2,7 @@ package com.driver.models;
 
 import java.util.Arrays;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,15 +23,24 @@ public class Image{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-    private String imageName;
-    private byte[] imageData;
-    
-    public byte[] getImageData() {
-        return Arrays.copyOf(imageData, imageData.length);
-    }
-    public void setImageData(byte[] imageData) {
-        this.imageData = Arrays.copyOf(imageData, imageData.length);
-    }
+	 int id;
+	Blog blog;
+	
+	String description;
+	String dimention;
+	
+	public Image(String description, String dimention) {
+		this.description=description;
+		this.dimention=dimention;
+	}
+
+	public String getDimensions() {
+		// TODO Auto-generated method stub
+		return this.dimention;
+	}
+
+	
+	
+   
 	
 }

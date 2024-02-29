@@ -17,5 +17,5 @@ public class Blog{
 	 private UUID blogId;
 	 private String title;
 	 private String content;
-	 private Long userId;
+	 private int userId;
 }

@@ -21,7 +21,7 @@ public class BlogService {
     @Autowired
     UserRepository userRepository1;
 
-    public Blog createAndReturnBlog(Long userId, String title, String content) {
+    public Blog createAndReturnBlog(int userId, String title, String content) {
         //create a blog at the current time
     	 User user = userRepository1.findById(userId).orElse(null);
            

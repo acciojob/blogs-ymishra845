@@ -21,8 +21,10 @@ import lombok.ToString;
 public class User{
 	 
 	   @Id
-	   @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private Long id;
+	   @GeneratedValue(strategy = GenerationType.AUTO)
+	    private int Id;
+	   
+	   
 	    private String username;
 	    private String password;
 }
